@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Administrator/Documents/NetBeansProjects/Hotel%20Management%20System/src/hotel/management/system/AddRoom.java</file>
-            <file>file:/C:/Users/Administrator/Documents/NetBeansProjects/Hotel%20Management%20System/src/hotel/management/system/Dashboard.java</file>
-            <file>file:/C:/Users/Administrator/Documents/NetBeansProjects/Hotel%20Management%20System/src/hotel/management/system/AddEmployee.java</file>
-            <file>file:/C:/Users/Administrator/Documents/NetBeansProjects/Hotel%20Management%20System/src/hotel/management/system/AddCoustmer.java</file>
-            <file>file:/C:/Users/Administrator/Documents/NetBeansProjects/Hotel%20Management%20System/src/hotel/management/system/Login.java</file>
-            <file>file:/C:/Users/Administrator/Documents/NetBeansProjects/Hotel%20Management%20System/src/hotel/management/system/Reception.java</file>
+            <file>file:/D:/saksham_projects/myfirstproject_hotel_management/src/hotel/management/system/HotelManagementSystem.java</file>
+            <file>file:/D:/saksham_projects/myfirstproject_hotel_management/src/hotel/management/system/AddEmployee.java</file>
+            <file>file:/D:/saksham_projects/myfirstproject_hotel_management/src/hotel/management/system/AddDriver.java</file>
+            <file>file:/D:/saksham_projects/myfirstproject_hotel_management/src/hotel/management/system/AddCoustmer.java</file>
         </group>
     </open-files>
 </project-private>
