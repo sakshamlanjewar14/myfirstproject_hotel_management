@@ -104,9 +104,10 @@ public class AddCoustmer extends JFrame implements ActionListener {
 
         croom = new Choice();
         croom.setBounds(200, 280, 150, 25);
+        add(croom);
         try {
             Conn conn = new Conn();
-            String query = "select * from room";   //for getting data from db
+            String query = "select * from room where availability='available'";   //for getting data from db
             ResultSet rs = conn.s.executeQuery(query);
             while (rs.next()) {
                 croom.add(rs.getString("roomno"));
@@ -122,7 +123,7 @@ public class AddCoustmer extends JFrame implements ActionListener {
         add(checkin);
 
         Date date = new Date();//getting screen window time
-        JLabel checkintime = new JLabel("" + date);
+        checkintime = new JLabel("" + date);
         checkintime.setBounds(200, 320, 150, 25);
         checkintime.setFont(new Font("Raleway", Font.PLAIN, 15));
         add(checkintime);
@@ -161,8 +162,7 @@ public class AddCoustmer extends JFrame implements ActionListener {
 
         setTitle("AddCoustmer");
         getContentPane().setBackground(Color.WHITE);
-        setBounds(350, 230, 800, 550);
-        setLocationRelativeTo(null); // Center the frame
+        setBounds(310, 150, 800, 550);
         setVisible(true);
 
     }
@@ -189,11 +189,27 @@ public class AddCoustmer extends JFrame implements ActionListener {
 
             String country = fcountry.getText();
             String room = croom.getSelectedItem();
-            String time = checkintime.getText();
-             String deposit = fdeposit.getText();
+            String checkin = checkintime.getText();
+            String deposit = fdeposit.getText();
 
-        } else if(e.getSource()== back){
-            
+            try {
+                String query = "insert into coustmer values('" + id + "','" + number + "','" + name + "','" + gender + "','" + country + "','" + room + "','" + checkin + "','" + deposit + "' )";
+                String query2 = "update room set availability = 'OCCUPIED' where roomno ='" + room + "'";
+
+                Conn conn = new Conn();
+                conn.s.executeUpdate(query);
+                conn.s.executeUpdate(query2);
+                JOptionPane.showMessageDialog(null, "NEW COUSTMER ADDED SUCCESSFULLY");
+                setVisible(false);
+                new Reception();
+            } catch (Exception ee) {
+                ee.printStackTrace();
+
+            }
+        } else if (e.getSource() == back) {
+            setVisible(false);
+            new Reception();
+
         }
     }
 

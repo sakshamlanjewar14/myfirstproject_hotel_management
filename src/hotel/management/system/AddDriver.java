@@ -136,9 +136,9 @@ public class AddDriver extends JFrame implements ActionListener {
         add(image);
 
         setTitle("Add Driver");
+        
         getContentPane().setBackground(Color.WHITE);
-        setLocationRelativeTo(null); // Center the frame
-        setBounds(300, 280, 980, 450);
+        setBounds(210, 180, 980, 450);
         setVisible(true);
 
     }

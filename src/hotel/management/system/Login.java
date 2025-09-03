@@ -79,8 +79,7 @@ public class Login extends JFrame implements ActionListener {
             String user = username.getText();
             char[] passwordChars = password.getPassword();
             String enteredPassword = new String(passwordChars); // Convert to String for comparison (use carefully)
-            System.out.println("user:" + user);
-            System.out.println("password:" + enteredPassword);
+
             try {
                 Conn c = new Conn();
                 String query = "select * from login where username = '" + user + "' and password='" + enteredPassword + "'";
@@ -91,12 +90,14 @@ public class Login extends JFrame implements ActionListener {
                 } else {
                     JOptionPane.showMessageDialog(null, "Invalid Username And Password");
                     setVisible(false);
+                     new Login();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else if (ae.getSource() == cancel) {
             setVisible(false);
+
         }
     }
 

@@ -105,8 +105,7 @@ public class AddRoom extends JFrame implements ActionListener {
 
         setTitle("Add Room");
         getContentPane().setBackground(Color.WHITE);
-        setLocationRelativeTo(null); // Center the frame
-        setBounds(330, 200, 940, 470);
+        setBounds(250, 150, 940, 470);
         setVisible(true);
 
     }
@@ -121,22 +120,24 @@ public class AddRoom extends JFrame implements ActionListener {
         if (e.getSource() == add) {
 
             String roomno = froomno.getText();
-            String available = (String)availablecombo.getSelectedItem();
-            String clean =(String)cleancombo.getSelectedItem();
+            String available = (String) availablecombo.getSelectedItem();
+            String clean = (String) cleancombo.getSelectedItem();
             String price = fprice.getText();
-            String bed = (String)typecombo.getSelectedItem();
-            
-           try {
-            Conn conn = new Conn();
-            String str = "insert into room values('"+ roomno+"','"+available+"','"+clean+"','"+price+"','"+bed+"')";
-            conn.s.executeUpdate(str);
-            JOptionPane.showMessageDialog(null, "NEW ROOM ADDED SUCCESSFULLY");
-            setVisible(false);
-        } catch (Exception ae) {
-            ae.printStackTrace();
-        }
+            String bed = (String) typecombo.getSelectedItem();
+
+            try {
+                Conn conn = new Conn();
+                String str = "insert into room values('" + roomno + "','" + available + "','" + clean + "','" + price + "','" + bed + "')";
+                conn.s.executeUpdate(str);
+                JOptionPane.showMessageDialog(null, "NEW ROOM ADDED SUCCESSFULLY");
+                setVisible(false);
+                new Dashboard();
+            } catch (Exception ae) {
+                ae.printStackTrace();
+            }
         } else {
             setVisible(false);
+            new Dashboard();
         }
     }
 

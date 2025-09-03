@@ -36,7 +36,7 @@ public class Dashboard extends JFrame implements ActionListener {
         add(image);
 
         JLabel text = new JLabel("THE TAJ GROUP WELCOMES YOU");
-        text.setBounds(250, 80, 1000, 50);
+        text.setBounds(290, 60, 1000, 50);
         text.setForeground(Color.white);
         text.setFont(new Font("italic", Font.PLAIN, 50));
         image.add(text); //to add text on image
@@ -50,7 +50,7 @@ public class Dashboard extends JFrame implements ActionListener {
         mb.add(hotel);
 
         JMenuItem reception = new JMenuItem("RECEPTION");
-         reception.addActionListener(this);
+        reception.addActionListener(this);
         hotel.add(reception);
 
         JMenu admin = new JMenu("ADMIN");
@@ -74,21 +74,18 @@ public class Dashboard extends JFrame implements ActionListener {
         setVisible(true);
         setTitle("Dashboard");
     }
-    
-     @Override
+
+    @Override
     //for click event
     public void actionPerformed(ActionEvent ae) {
         //for get menu deta....getActionCommond
-        if (ae.getActionCommand().equals("ADD EMPLOYEE")){
+        if (ae.getActionCommand().equals("ADD EMPLOYEE")) {
             new AddEmployee();
-        }
-        else if(ae.getActionCommand().equals("ADD ROOM")){
+        } else if (ae.getActionCommand().equals("ADD ROOM")) {
             new AddRoom();
-        }
-         else if(ae.getActionCommand().equals("ADD DRIVER")){
+        } else if (ae.getActionCommand().equals("ADD DRIVER")) {
             new AddDriver();
-        }
-        else if(ae.getActionCommand().equals("RECEPTION")){
+        } else if (ae.getActionCommand().equals("RECEPTION")) {
             new Reception();
         }
 
@@ -98,5 +95,4 @@ public class Dashboard extends JFrame implements ActionListener {
         new Dashboard();
     }
 
-   
 }

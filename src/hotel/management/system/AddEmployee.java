@@ -74,7 +74,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         job.setFont(new Font("Tahoma", Font.PLAIN, 17));
         add(job);
 
-        String str[] = {"Govt. Servent","Private Job","Bussiness"};
+        String str[] = {"Govt. Servent","Private Job","Bussiness","Manager"};
         cbjob = new JComboBox(str);
         cbjob.setBounds(200, 180, 150, 30);
         cbjob.setBackground(Color.WHITE);
@@ -138,8 +138,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         setTitle("Add Employee");
        getContentPane().setBackground(Color.WHITE);
-        setBounds(350, 700, 850, 540);
-        setLocationRelativeTo(null); // Center the frame
+        setBounds(270, 150, 850, 540);
         setVisible(true);
         
 
